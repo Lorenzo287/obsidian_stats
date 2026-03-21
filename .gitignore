@@ -1,0 +1,17 @@
+# Data files
+*.csv
+
+# Python environment
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.psenvrc
+
+# Local configuration (to be created by user)
+.env
+local_config.py
+
+# IDEs
+.vscode/
+.idea/
