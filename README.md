@@ -1,4 +1,4 @@
-# Obsidian Productivity Tracker
+# Obsidian Stats
 
 A Python-based productivity tracking system that parses daily journal entries from an Obsidian vault to generate insights, heatmaps, and trend analysis.
 
