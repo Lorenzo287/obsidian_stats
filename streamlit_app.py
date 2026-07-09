@@ -262,9 +262,9 @@ with overview_tab:
     st.pyplot(make_trend_plot(filtered_df), clear_figure=True)
 
     left, right = st.columns(2)
-    monthly = filtered_df.groupby("month_name", sort=False)["prod_score"].mean().reset_index()
+    monthly = filtered_df.groupby("month", sort=False)["prod_score"].mean().reset_index()
     left.subheader("Average by Month")
-    left.bar_chart(monthly, x="month_name", y="prod_score")
+    left.bar_chart(monthly, x="month", y="prod_score")
 
     habits = filtered_df[["read", "music", "sd"]].sum().rename(
         {"read": "Reading days", "music": "Music days", "sd": "Study deficit days"}
