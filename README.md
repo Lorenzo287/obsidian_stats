@@ -27,7 +27,7 @@ A Python-based productivity tracking system that parses daily journal entries fr
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-   pip install pandas numpy matplotlib seaborn scikit-learn
+   pip install pandas numpy matplotlib seaborn scikit-learn streamlit
    ```
 3. **Configure Environment Variables**:
    Copy `.env.example` to a new file named `.env` and update the paths to point to your Obsidian vault and preferred output locations:
@@ -44,3 +44,11 @@ Run the scripts in order to update your data and view insights:
 1. `python 0_data_import.py`
 2. `python 1_prod_score.py`
 3. Any of the other analysis scripts (`2_heatmap.py`, etc.).
+
+Or launch the dashboard mode:
+
+```bash
+streamlit run streamlit_app.py
+```
+
+The dashboard reads the existing `prod_output.csv` by default and includes a sidebar refresh button to re-import the Obsidian vault data and recompute productivity scores.
